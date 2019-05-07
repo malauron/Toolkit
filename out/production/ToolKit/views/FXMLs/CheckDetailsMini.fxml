@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="157.0" prefWidth="420.0" style="-fx-background-color: #FF7E85;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.CheckDetailsMini">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="5.0" prefHeight="146.0" prefWidth="410.0" style="-fx-background-color: #eeeeee;">
+         <children>
+            <Label layoutX="5.0" layoutY="4.0" prefHeight="17.0" prefWidth="140.0" style="-fx-background-color: #FF7E85;" text="Voucher No." textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVoucherNo" layoutX="5.0" layoutY="21.0" prefHeight="19.0" prefWidth="140.0" style="-fx-background-color: #eeeeee;" text="1234567890" textFill="#000001">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="156.0" layoutY="4.0" prefWidth="140.0" style="-fx-background-color: #FF7E85;" text="Check No." textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCheckNo" layoutX="155.0" layoutY="21.0" prefHeight="19.0" prefWidth="140.0" style="-fx-background-color: #eeeeee;" text="1234567890" textFill="#000001">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="306.0" layoutY="4.0" prefWidth="92.0" style="-fx-background-color: #FF7E85;" text="Date" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="306.0" layoutY="21.0" prefHeight="19.0" prefWidth="92.0" style="-fx-background-color: #eeeeee;" text="2018-01-01" textFill="#000001">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="4.0" layoutY="46.0" prefHeight="17.0" prefWidth="393.0" style="-fx-background-color: #FF7E85;" text="Vendor" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPayee" alignment="TOP_LEFT" layoutX="5.0" layoutY="63.0" prefHeight="41.0" prefWidth="393.0" style="-fx-background-color: #eeeeee;" text="AJDJDJALALSLDJFJALSLKDJFLALKDJFJAJDKKJFLAKSJDKFJALKSJDKFLAKSJDLFKJAASDFAADFGQWERTTERTERT" textFill="#000001" wrapText="true">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="258.0" layoutY="108.0" prefWidth="140.0" style="-fx-background-color: #FF7E85;" text="Amount" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAmount" alignment="CENTER_RIGHT" layoutX="258.0" layoutY="125.0" prefHeight="19.0" prefWidth="140.0" style="-fx-background-color: #eeeeee;" text="100,000,000.00" textFill="#000001">
+               <font>
+                  <Font name="Microsoft JhengHei Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.MainForm">
+   <children>
+      <HBox prefHeight="650.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="650.0" prefWidth="512.0" spacing="20.0" style="-fx-background-color: #E6E6E6;">
+               <children>
+                  <Label text="Billings Status">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Microsoft JhengHei" size="24.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="pieChartBillingStatus" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="650.0" prefWidth="512.0" spacing="20.0">
+               <children>
+                  <Label text="Billings (Aging)">
+                     <font>
+                        <Font name="Microsoft JhengHei" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <BarChart fx:id="barChartBillingsAge">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

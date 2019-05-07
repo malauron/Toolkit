@@ -1,0 +1,110 @@
+
+
+.close:hover,.minimize:hover,.settings:hover {
+
+    -fx-fill: rgb(81, 168, 255);
+}
+
+.close:pressed,.minimize:pressed,.settings:pressed {
+    -fx-fill: rgb(48, 71, 120);
+}
+
+.actionButton {
+    -fx-fill: #ff7e85;
+}
+
+.actionButton:hover {
+    -fx-fill: #ff464a;
+}
+
+.actionButton:pressed {
+    -fx-fill: #ffbcc3;
+}
+
+/*************     USER     **************/
+
+.imageview-holder {
+    -fx-padding: 5px;
+    -fx-background-color: rgb(71, 153, 116);
+    -fx-background-radius: 90px;
+    -fx-max-width: 170px;
+    -fx-max-height: 170px;
+
+}
+/************************************************/
+
+/*************     SEARCH     **************/
+
+.search-table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.search-table .column-header-background {
+    visibility: hidden;
+    -fx-padding: -1em;
+}
+
+.search-table:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color:  #3671A8;
+    -fx-table-cell-border-color: transparent;
+}
+
+.search-table .table-cell {
+    -fx-alignment: center-left;
+}
+
+.search-table .table-row-cell:empty {
+    -fx-background-color: #f8f8f8;
+    -fx-base: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.search-table .table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+/************************************************/
+
+/*************     DISPLAY TABLE     **************/
+
+.display-table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.display-table .column-header-background {
+    /*visibility: hidden;
+    -fx-padding: -1em;*/
+}
+
+.display-table:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color:  #3671A8;
+    -fx-table-cell-border-color: transparent;
+}
+
+.display-table .table-cell {
+    -fx-alignment: center-left;
+}
+
+.display-table .table-row-cell:empty {
+    -fx-background-color: #f8f8f8;
+    -fx-base: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.display-table .table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+/************************************************/
+
+/*************     NUMERIC TABLE COLUMNS     **************/
+
+.custom-align {
+    -fx-alignment: center-right;
+}

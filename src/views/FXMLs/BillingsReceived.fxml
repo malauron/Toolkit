@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1024.0" style="-fx-background-color: #FF7E85;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.BillingsReceived">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 5px;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1024.0" spacing="10.0" style="-fx-background-color: #FF7E85;">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="366.0" text="Receive Billing" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft JhengHei" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <HBox fx:id="hbxSaveStatus" alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0">
+                     <children>
+                        <JFXSpinner />
+                        <Label prefHeight="50.0" prefWidth="366.0" text="Saving..." textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <JFXButton fx:id="btnBrowse" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="58.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="30" />
+                     </graphic>
+                  </JFXButton>
+               </children></HBox>
+            <HBox fx:id="hbxInfo" prefHeight="650.0" prefWidth="1024.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="645.0" prefWidth="324.0" style="-fx-background-color: #F3F3F3;">
+                     <padding>
+                        <Insets top="100.0" />
+                     </padding></VBox>
+                  <VBox prefHeight="650.0" prefWidth="700.0" spacing="30.0">
+                     <padding>
+                        <Insets left="50.0" right="50.0" top="100.0" />
+                     </padding>
+                     <children>
+                        <StackPane alignment="CENTER_RIGHT" prefHeight="7.0" prefWidth="595.0">
+                           <children>
+                              <JFXTextField fx:id="txtSupplier" editable="false" focusColor="#ff7e85" labelFloat="true" prefHeight="30.0" prefWidth="360.0" promptText="Supplier" unFocusColor="#ff7e85">
+                                 <font>
+                                    <Font name="Microsoft JhengHei" size="14.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton fx:id="btnBrowseSupplier" alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" prefHeight="30.0" prefWidth="30.0">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#ff7e85" glyphName="SEARCH" size="20" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </StackPane>
+                        <JFXTextField fx:id="txtBillingRefNo" focusColor="#ff7e85" labelFloat="true" prefHeight="30.0" prefWidth="360.0" promptText="Reference No." unFocusColor="#ff7e85">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtBillingAmount" focusColor="#ff7e85" labelFloat="true" prefHeight="30.0" prefWidth="360.0" promptText="Amount" unFocusColor="#ff7e85">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextArea fx:id="txtRemarks" focusColor="#ff7e85" labelFloat="true" prefHeight="84.0" prefWidth="595.0" promptText="Remarks" unFocusColor="#ff7e85">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                        </JFXTextArea>
+                        <HBox fx:id="hbxError" alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="595.0">
+                           <children>
+                              <MaterialDesignIconView fill="#ff7e85" glyphName="ALERT_CIRCLE" size="40" />
+                              <Label fx:id="lblError" prefHeight="49.0" prefWidth="553.0" text="Error..." textFill="#ff7e85">
+                                 <font>
+                                    <Font name="Microsoft JhengHei" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="60.0" prefWidth="595.0" spacing="10.0">
+                           <children>
+                              <JFXButton fx:id="btnNew" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #e0a141; -fx-background-radius: 10px;" text="New" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft JhengHei" size="18.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="btnSave" defaultButton="true" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #0f9d58; -fx-background-radius: 10px;" text="Save" textFill="WHITE">
+                                 <font>
+                                    <Font name="Microsoft JhengHei" size="18.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

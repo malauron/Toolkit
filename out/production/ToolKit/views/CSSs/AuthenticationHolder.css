@@ -1,0 +1,33 @@
+*{
+    -fx-blue-main: #3671A8;
+    -fx-default-fill: #FFFFFF;
+    -fx-shadow: #3C3C3C;
+    -fx-blue-hover: #51A8FF;
+    -fx-blue-pressed: #304778;
+}
+
+.grpAuthentication {
+    -fx-effect: DropShadow(three-pass-box, -fx-shadow,20,0,0,0);
+}
+
+.main-window {
+    -fx-border-color:  -fx-blue-main;
+    -fx-background-color:  -fx-default-fill;
+}
+
+.hbxHeader {
+    -fx-border-color:  -fx-blue-main;
+    -fx-background-color:  -fx-blue-main;
+}
+
+.close,.minimize,.settings {
+    -fx-fill: -fx-default-fill;
+}
+
+.close:hover,.minimize:hover,.settings:hover {
+    -fx-fill: -fx-blue-hover;
+}
+
+.close:pressed,.minimize:pressed,.settings:pressed {
+    -fx-fill: -fx-blue-pressed;
+}

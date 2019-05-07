@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jpscs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../pervasivejdbc/PSQL-SDK-JDBC-13.20.023.000/bin/jpscs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../pervasivejdbc/PSQL-SDK-JDBC-13.20.023.000/bin/pvjdbc2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../pervasivejdbc/PSQL-SDK-JDBC-13.20.023.000/bin/pvjdbc2x.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

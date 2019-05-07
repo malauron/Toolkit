@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" stylesheets="@/views/CSSs/GeneralStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.ApplicationHolder">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1024.0" spacing="5.0" style="-fx-background-color: #3671A8;" styleClass="top-bar">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="725.0" spacing="10.0">
+               <children>
+                  <StackPane>
+                     <children>
+                        <JFXButton fx:id="btnMenu" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="MENU" size="40" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnHideMenu" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="BACKBURGER" size="40" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </StackPane>
+                  <JFXButton fx:id="btnMainForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="40" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fx:id="imvUserPhoto" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <VBox alignment="TOP_CENTER" minHeight="50.0">
+                     <children>
+                        <Label fx:id="lblUsername" prefHeight="10.0" prefWidth="220.0" styleClass="top-title" text="User" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="lblServer" prefHeight="10.0" prefWidth="220.0" styleClass="top-title" text="Server" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="lblDatabase" prefHeight="10.0" prefWidth="220.0" styleClass="top-title" text="Database" textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="10.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="344.0">
+               <children>
+                  <JFXButton fx:id="btnMinimize" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="COLOR_HELPER" size="25" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnClose" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="50.0" prefWidth="50.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="WINDOW_CLOSE" size="40" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <StackPane alignment="CENTER_LEFT" prefHeight="650.0" prefWidth="1024.0">
+         <children>
+            <AnchorPane fx:id="appHolder" prefHeight="650.0" prefWidth="1024.0" />
+            <VBox fx:id="vbxMenu" alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="220.0" style="-fx-background-color: #3671A8;">
+               <children>
+                  <Accordion prefHeight="650.0" prefWidth="220.0">
+                    <panes>
+                      <TitledPane graphicTextGap="5.0" text="Masterdata">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView fill="#0f9d58" glyphName="VIEW_LIST" size="40" text="" />
+                           </graphic>
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="650.0" prefWidth="709.0">
+                                 <content>
+                                    <VBox prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: grey;">
+                                       <children>
+                                          <JFXButton fx:id="btnSupplier" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #0f9d58; -fx-background-radius: 0;" text="Supplier" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_BOX" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #477974; -fx-background-radius: 0;" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="CONTRAST" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #0f9d58; -fx-background-radius: 0;" text="User Group" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="GROUP" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnUser" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #477974; -fx-background-radius: 0;" text="User" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_KEY" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                      </TitledPane>
+                        <TitledPane layoutX="10.0" layoutY="10.0" text="Transactions">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView fill="#ff7e85" glyphName="TABLE_EDIT" size="40" />
+                           </graphic>
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
+                                 <content>
+                                    <VBox prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: grey;">
+                                       <children>
+                                          <JFXButton fx:id="btnBillingsReceived" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FF7E85; -fx-background-radius: 0;" text="Receive Billing" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="FILE_IMPORT" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnBillingsProcess" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: d6656c; -fx-background-radius: 0;" text="Process Billing" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="FILE_CHART" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnChecksInTransit" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FF7E85; -fx-background-radius: 0;" text="Checks In Transit" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="TRANSFER" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnChecksReleasing" contentDisplay="TOP" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: d6656c; -fx-background-radius: 0;" text="Checks Releasing" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="CHECKBOX_MARKED_CIRCLE_OUTLINE" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnChecksEncashment" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FF7E85; -fx-background-radius: 0;" text="Checks Encashment" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="WALLET" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane text="Reports">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView fill="#e0a141" glyphName="BULLETIN_BOARD" size="40" />
+                           </graphic>
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
+                                 <content>
+                                    <VBox prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: grey;">
+                                       <children>
+                                          <JFXButton fx:id="btnChecksStatus" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #e0a141; -fx-background-radius: 0;" text="Checks Status" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="FILE_CHECK" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane text="Settings">
+                           <font>
+                              <Font name="Microsoft JhengHei" size="14.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView fill="#9718af" glyphName="SETTINGS_BOX" size="40" />
+                           </graphic>
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
+                                 <content>
+                                    <VBox prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: grey;">
+                                       <children>
+                                          <JFXButton fx:id="btnMSSQLConnection" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #9718AF; -fx-background-radius: 0;" text="MSSQL Connection" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="DATABASE" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnPSQLConnection" contentDisplay="TOP" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #c449dd; -fx-background-radius: 0;" text="PSQL Connection" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft JhengHei" size="14.0" />
+                                             </font>
+                                             <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="SERVER" size="50" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>
