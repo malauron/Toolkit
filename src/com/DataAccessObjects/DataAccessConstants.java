@@ -123,6 +123,7 @@ public class DataAccessConstants {
     public static final String TBL_BANKACCTADJ = "bank_accounts_adjustments";
     public static final String COL_ADJUSTAMT = "adjustment_amount";
     public static final String COL_ADJDATE = "adjustment_date";
+    public static final String COL_ADJREMARKS = "remarks";
 
 
 

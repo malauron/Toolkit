@@ -87,7 +87,7 @@ public class BankAccounts {
         return bankAccount;
     }
 
-    public ExecuteStatus handleBankAccountAdjustment(BankAccount bankAccount,Double adjAmount) {
+    public ExecuteStatus handleBankAccountAdjustment(BankAccount bankAccount,Double adjAmount,String remarks) {
 
         ExecuteStatus executeStatus = ExecuteStatus.ERROR_OCCURED;
 
@@ -97,12 +97,13 @@ public class BankAccounts {
             updateBankAccountBalance(bankAccount,adjAmount);
 
             String sql = "insert into " + TBL_BANKACCTADJ +
-                    "(" + COL_ACCTNUM + "," + COL_ADJUSTAMT + "," + COL_ADJDATE +"," + COL_USER_ID +
-                    ") values (?,?,now(),?)";
+                    "(" + COL_ACCTNUM + "," + COL_ADJUSTAMT + "," + COL_ADJDATE +"," + COL_USER_ID + "," + COL_ADJREMARKS +
+                    ") values (?,?,now(),?,?)";
             PreparedStatement ps = ConnectionMain.getInstance().cn().prepareStatement(sql);
             ps.setString(1,bankAccount.getAccountNumber());
             ps.setDouble(2,adjAmount);
             ps.setInt(3, CurrentUser.getInstance().getUserID());
+            ps.setString(4, remarks);
             ps.executeUpdate();
             ps.close();
             ConnectionMain.getInstance().cn().commit();

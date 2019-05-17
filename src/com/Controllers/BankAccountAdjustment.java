@@ -4,23 +4,29 @@ import com.DataAccessObjects.BankAccounts;
 import com.DataModels.BankAccount;
 import com.Interfaces.IBankAccountAdjustment;
 import com.Utilities.ExecuteStatus;
+import com.Utilities.NumberFormatter;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.TextFormatter;
 import javafx.stage.Stage;
+
+import java.text.DecimalFormat;
 import java.util.concurrent.ExecutionException;
+import java.util.function.UnaryOperator;
 
 public class BankAccountAdjustment {
 
     @FXML
     private JFXTextField txtAmount;
+    @FXML
+    private JFXTextArea txtRemarks;
     @FXML
     private JFXButton btnAdd;
     @FXML
@@ -29,20 +35,22 @@ public class BankAccountAdjustment {
     private IBankAccountAdjustment bankAccountAdjustment;
     private BankAccount bankAccount;
     private Task<ExecuteStatus> handleAdjustmentTask;
+    private DecimalFormat df = new DecimalFormat("#,##0.00");
 
     public BankAccountAdjustment(BankAccount bankAccount) {
         this.bankAccount = bankAccount;
     }
 
     public void initialize() {
-        txtAmount.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                if (!newValue.matches("\\d{0,9}([\\.]\\d{0,2})?")) {
-                    txtAmount.setText(oldValue);
-                }
-            }
-        });
+
+        txtAmount.setTextFormatter(new NumberFormatter());
+
+        txtRemarks.setTextFormatter(new TextFormatter<String>(new UnaryOperator<TextFormatter.Change>() {
+          @Override
+          public TextFormatter.Change apply(TextFormatter.Change change) {
+            return change.getControlNewText().length() <= 50 ? change : null;
+          }
+        }));
 
         btnAdd.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -70,7 +78,7 @@ public class BankAccountAdjustment {
             @Override
             protected ExecuteStatus call() throws Exception {
                 return new BankAccounts().handleBankAccountAdjustment(
-                        bankAccount,Double.parseDouble(txtAmount.getText())
+                        bankAccount, df.parse(txtAmount.getText()).doubleValue(), txtRemarks.getText()
                 );
             }
         };
@@ -102,12 +110,14 @@ public class BankAccountAdjustment {
 
     private void lockControls() {
         txtAmount.setEditable(false);
+        txtRemarks.setEditable(false);
         btnAdd.setDisable(true);
         btnCancel.setDisable(true);
     }
 
     private void unlockControls() {
         txtAmount.setEditable(true);
+        txtRemarks.setEditable(true);
         btnAdd.setDisable(false);
         btnCancel.setDisable(false);
     }

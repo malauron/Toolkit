@@ -4,6 +4,7 @@ import com.DataAccessObjects.CheckVouchers;
 import com.DataModels.CheckVoucher;
 import com.Interfaces.ICheckDetails;
 import com.Utilities.ExecuteStatus;
+import com.Utilities.NumberFormatter;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.animation.FadeTransition;
